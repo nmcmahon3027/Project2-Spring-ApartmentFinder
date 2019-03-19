@@ -2,7 +2,17 @@ package dal;
 
 import model.facility.TwoBedroom;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Counter extends TwoBedroom {
+    private List<Person> people = new ArrayList<>();
+    private static Counter counterData = null;
+
+
 
         //this class will hold the number of available units for each apartment
 
@@ -43,6 +53,25 @@ public class Counter extends TwoBedroom {
     }
     public String toString(){
         return "" + bedOne;
+    }
+
+
+    //Implementing the singleton model
+    public static Counter getCounterData(){
+        if(counterData==null){
+            counterData = new Counter();
+        }
+        return counterData;
+    }
+    public void addPerson(Person person){
+        people.add(person);
+
+        try {
+            Connection con = new DatabaseConnection().getConnection();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        Statement statement;
     }
 
 

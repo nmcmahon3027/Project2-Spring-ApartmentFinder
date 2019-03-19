@@ -3,12 +3,14 @@ package view;
 
 import dal.Counter;
 import dal.OneBedApartment;
+import dal.Person;
 import dal.RoomInfoInterface;
 import model.facility.Studio;
 import model.facility.ThreeBedroom;
 import model.facility.TwoBedroom;
 
 
+import java.awt.event.ActionEvent;
 import java.util.Scanner;
 
 
@@ -44,19 +46,6 @@ public class Main extends Counter implements RoomInfoInterface {
 
     public static void main(String[] args) {
 
-       /* ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/app-context.xml");
-        System.out.println("***************** Application Context instantiated! ******************");
-
-
-        //Spring to inject the right object implementation in CustomerService for customer using Setter Injection
-        //Also, bootstrapping the CustomerService instantiation using factory
-        OneBedApartment contextBean = (OneBedApartment) context.getBean("contextBean");
-
-        *//*Customer customer = customerService.getCustomer();
-        customer.setFirstName("Michael");
-        customer.setLastName("Gerard");
-        customer.setCustomerId("AY2345");
-*/
         //creates a Counter object to keep track of
         Counter unitCount = new Counter(); //was: Counter unitCount = new Counter();
         unitCount.getValue();
@@ -71,9 +60,24 @@ public class Main extends Counter implements RoomInfoInterface {
         System.out.println("'two bedroom'");
         System.out.println("'three bedroom'");
         System.out.println("'user' (I am currently a renter and need assistance)'");
+        System.out.println("'request' (I would like to send my info)");
         //creates scanner object for user input
         Scanner scan = new Scanner(System.in);
         Object input = scan.nextLine();
+
+        if(input.equals("request")){
+            Person person = new Person("YOUR NAME");
+            person.setFirstName(" neal");
+            person.setLastName(" mcmahon");
+            person.getPerson();
+            System.out.println("NAME: " + person.getFirstName() + person.getLastName() + " has been sent");
+
+           directory();
+
+
+
+
+        }
 
         if(input.equals("studio")){
             System.out.println("You selected STUDIO");
@@ -459,6 +463,13 @@ public class Main extends Counter implements RoomInfoInterface {
     }
     //for future use to show floor plans
     public static void floorPlans(){
+
+    }
+
+
+    public void actionPerformed(ActionEvent e){
+        System.out.println("Checking now...");
+        Counter.getCounterData().addPerson(new Person("Neal"));
 
     }
 

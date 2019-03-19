@@ -2,6 +2,7 @@ package model.facilityMaintenance;
 
 import java.util.ArrayList;
 import java.util.List;
+import dal.Counter;
 
 public class Requests {
     //Requests is a feature that can be implemented later as an add-on
@@ -19,9 +20,11 @@ public class Requests {
     }
 
 
+}
 
 
-    }
+
+
 
 
 
