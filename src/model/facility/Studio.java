@@ -1,6 +1,14 @@
 package model.facility;
 
+import java.util.List;
+import java.util.Scanner;
+
+@SpringBootApplication
+
+
+
 public class Studio implements RoomType {//was implements RoomInfoInterface
+						//was implemets RoomType
 
 		@Override
 		public void getRent() {

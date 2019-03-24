@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="ConfigForSpring" removed="false">
+          <file>file://$MODULE_DIR$/src/dal/ConfigForSpring.xml</file>
+          <file>file://$MODULE_DIR$/src/view/ConfigForSpring.xml</file>
+          <file>file://$MODULE_DIR$/src/model/facility/ConfigForSpring.xml</file>
+          <file>file://$MODULE_DIR$/src/model/facilityUse/ConfigForSpring.xml</file>
+          <file>file://$MODULE_DIR$/src/view/ConfigMain.xml</file>
+        </fileset>
+        <fileset id="fileset2" name="ConfigForSpring (2)" removed="false">
+          <file>file://$MODULE_DIR$/src/model/facilityMaintenance/ConfigForSpring.xml</file>
+          <file>file://$MODULE_DIR$/src/model/facility/ConfigForSpring.xml</file>
+          <file>file://$MODULE_DIR$/src/view/ConfigForSpring.xml</file>
+          <file>file://$MODULE_DIR$/src/dal/ConfigForSpring.xml</file>
+        </fileset>
+        <fileset id="fileset3" name="Beans" removed="false">
+          <file>file://$MODULE_DIR$/src/view/beans.xml</file>
+          <file>file://$MODULE_DIR$/src/model/facility/ConfigForSpring.xml</file>
+          <file>file://$MODULE_DIR$/src/view/ConfigForSpring.xml</file>
+          <file>file://$MODULE_DIR$/src/model/facilityMaintenance/ConfigForSpring.xml</file>
+          <file>file://$MODULE_DIR$/src/dal/ConfigForSpring.xml</file>
+        </fileset>
+        <fileset id="fileset4" name="NewConfig4Spring" removed="false">
+          <dependency>fileset</dependency>
+          <file>file://$MODULE_DIR$/src/dal/NewConfig4Spring.xml</file>
+          <file>file://$MODULE_DIR$/src/view/beans.xml</file>
+        </fileset>
+        <fileset id="fileset5" name="AddOnConfig" removed="false">
+          <file>file://$MODULE_DIR$/src/dal/addOnConfig.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
@@ -7,5 +41,17 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="Spring-4.3.18.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="Spring MVC-4.3.18.RELEASE" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/16.0.2/annotations-16.0.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" exported="" name="Spring MVC-4.3.18.RELEASE" level="project" />
   </component>
 </module>

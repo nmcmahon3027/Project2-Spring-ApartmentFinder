@@ -419,6 +419,9 @@ public class Main extends Counter implements RoomInfoInterface {
 
     }
 
+    public void setStudioBean(dal.Studio studioBean) {
+    }
+
     public static class EmployeeEmail{
         //separated for possible future extensions
         private String name;

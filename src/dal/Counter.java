@@ -1,6 +1,7 @@
 package dal;
 
 import model.facility.TwoBedroom;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -39,6 +40,7 @@ public class Counter extends TwoBedroom {
         bedTwo = init;
         permitParking = init;
     }
+
     public int getValue(){
         return bedOne;
 
