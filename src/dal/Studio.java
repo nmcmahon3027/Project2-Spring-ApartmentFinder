@@ -73,22 +73,11 @@ public class Studio {//was implements RoomInfoInterface
 
 	public static void main(String[] args) {
 
-       /* ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/app-context.xml");
-        System.out.println("***************** Application Context instantiated! ******************");
+        //Spring to inject the right object implementation in service classes for customer using Setter Injection
+        //Bootstrapping the OneBedApartment instantiation using factory
+       // OneBedApartment contextBean = (OneBedApartment) context.getBean("contextBean");
 
 
-        //Spring to inject the right object implementation in CustomerService for customer using Setter Injection
-        //Also, bootstrapping the CustomerService instantiation using factory
-        OneBedApartment contextBean = (OneBedApartment) context.getBean("contextBean");
-
-        *//*Customer customer = customerService.getCustomer();
-        customer.setFirstName("Michael");
-        customer.setLastName("Gerard");
-        customer.setCustomerId("AY2345");
-*/
-		//creates a Counter object to keep track of
-		//  Counter unitCount = new Counter(); //was: Counter unitCount = new Counter();
-		// unitCount.getValue();
 		System.out.println("                ");
 		System.out.println("Welcome to Apartment Finder!");
 		System.out.println("Apartment Finder is ranked Chicago's top choice for renters");
@@ -121,33 +110,7 @@ public class Studio {//was implements RoomInfoInterface
 			System.out.println("You selected ONE BEDROOM");
 			//System.out.println("Currently we have " + unitCount.bedOne + " units");
 			System.out.println("Here is what we found: ");
-			//uses the RoomInfoInterface to call needed methods
-           /* RoomInfoInterface onebdrm = new RoomInfoInterface() {
-                @Override
-                public void getRent() {
 
-                }
-
-                @Override
-                public void getAvailableUnits() {
-
-                }
-
-                @Override
-                public void getAvailableFloors() {
-
-                }
-
-                @Override
-                public void getMoveInDates() {
-
-                }
-
-                @Override
-                public void getAllRoomInfo() {
-
-                }
-            };*/
 
 			//goes back through oneBedInfo
 			oneBedInfo();
@@ -190,7 +153,7 @@ public class Studio {//was implements RoomInfoInterface
 
 	@RequestMapping("/try")
 	public Object sayHello(){
-		return "nnnnmmm";
+		return "Welcome!";
 	}
 
 	public static void threeBedInfo() {

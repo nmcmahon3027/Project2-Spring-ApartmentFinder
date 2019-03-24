@@ -11,6 +11,7 @@ public class Connect implements RoomInfoInterface {
     public Connect(){
         System.out.println("Simulation Complete");
         System.out.println("Apartment Finder Constructor Called!");
+        //used as an initial test class to pass objects
 
 
     }

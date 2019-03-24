@@ -20,13 +20,6 @@ import java.util.List;
 @RestController
 public class AddOnProj2Application {
 
-   // private LeasingRepo leasingRepo;
-/*
-    @Autowired
-    public AddOnProj2Application(LeasingRepo leasingRepo){
-        this.leasingRepo = leasingRepo;
-    }*/
-
     public List<String> unit;
     public AddOnProj2Application(){
         unit = new ArrayList<String>();
@@ -38,7 +31,6 @@ public class AddOnProj2Application {
 
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("SpringConfig.xml");
-       // System.out.println("Config loaded");
        // SpringApplication.run(AddOnProj2Application.class, args);
         Testspring testSpringProject = (Testspring) context.getBean("testBean");
         testSpringProject.showItRuns();
@@ -98,16 +90,11 @@ public class AddOnProj2Application {
                 "Average rent here is $1475 \n" +
                 "You selected " + input;
 
-
     }
-
-
 
 
     @RequestMapping(value = "/build/{input}", method = RequestMethod.GET)
     public Object build(@PathVariable String input) {
-
-
 
             System.out.println("                ");
             System.out.println("Welcome to Apartment Finder!");

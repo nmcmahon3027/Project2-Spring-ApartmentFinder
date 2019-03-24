@@ -24,6 +24,9 @@ public class AppHelper {
         ApplicationContext context = new ClassPathXmlApplicationContext("dal/addOnConfig.xml");
         System.out.println("Apartment Finder Spring Config Loaded!");
         Studio.directory();
+        Studio.search();
+
+
 
         AddOnProj2Application addOnProj2Application = (AddOnProj2Application) context.getBean("addOnProj2Application");
        addOnProj2Application.run("/build");
@@ -31,14 +34,16 @@ public class AppHelper {
 
 
 
-       // BeanFactory factory = new ClassPathXmlApplicationContext();
-              //  factory.getBean("studioBean");
+
+
+
+
+                  // BeanFactory factory = new ClassPathXmlApplicationContext();
+                 //  factory.getBean("studioBean");
                 //ApplicationContext context = new ClassPathXmlApplicationContext("NewConfig4Spring.xml");
                // context.getBean("studioBean");
-
-
-        //context.setServletContext(servletContext);
-         //SpringApplication.run(AddOnProj2Application.class, args);
+            //context.setServletContext(servletContext);
+            //SpringApplication.run(AddOnProj2Application.class, args);
 
 
 

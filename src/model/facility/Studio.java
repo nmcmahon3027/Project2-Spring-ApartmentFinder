@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 
 
-public class Studio implements RoomType {//was implements RoomInfoInterface
-						//was implemets RoomType
+public class Studio implements RoomType {	//Dev note: was implements RoomInfoInterface
+											//Dev note: was implemets RoomType
 
 		@Override
 		public void getRent() {
