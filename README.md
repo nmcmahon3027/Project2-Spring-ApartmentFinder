@@ -61,3 +61,7 @@ it reads:
 It creates a bean id titled /rent/studio which was originally created when the project runs using a data base like Tomcat. It is basically an extention of the original host http
 It runs the given intsance of finding the rent for all the apartment units and then, by the users input of {studio}, finds the studio's rent and prints it out on the webpage. 
 
+Other Notes: 
+The program has been modified to use certain Spring features, such as @RequestMapping, to take in certain user inputs in specific circumstances--if that bean is called. 
+
+The main bulk of the program has been modified and built using the POM and xml files, as seen above and in the code. However we did use a few other Spring features such as a database. 
